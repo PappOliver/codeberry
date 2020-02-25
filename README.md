@@ -1,2 +1,2 @@
 # codeberry
-Things i've learned at Codeberry Programming School.
+Things i've learned at CodeBerry Programming School.
