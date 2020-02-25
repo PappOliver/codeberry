@@ -1,0 +1,423 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, center,
+dl, dt, dd, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --- End of CSS reset --- */
+
+/* General */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	background: rgb(42, 40, 54);
+  background: linear-gradient(0deg, rgb(42, 40, 54) 0%, rgb(42, 40, 54) 85%, rgb(14, 13, 18) 96%);
+	font-family: Roboto, sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #BBC9C8;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.gray-link {
+  filter: grayscale(100%);
+}
+
+.gray-link:hover {
+  filter: grayscale(0%);
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
+}
+
+sup {
+  line-height: 0;
+}
+
+.clearfix-left {
+  content: "";
+  display: block;
+  clear: left;
+}
+
+h2, h3 {
+  font-family: "Times New Roman";
+}
+
+/* Left Navigation Bar */
+
+#left-nav-bar {
+	float: left;
+	width: 180px;
+	min-height: 100vh;
+}
+
+.logo {
+	width: 60%;
+	margin: 10% 20%;
+}
+
+.links {
+	width: 75%;
+	margin: 0 auto;
+	font-size: .8rem;
+}
+
+.links h6 {
+	color: #FFF;
+}
+
+.links h6::after {
+	display: block;
+	content: "";
+	height: 1px;
+	margin: 5px 0;
+	background-color: #0E0D12;
+}
+
+.links ul {
+  list-style: none;
+	padding-bottom: 15px;
+}
+
+.links ul li {
+	margin: 8px 0;
+}
+
+.language-settings {
+  position: relative;
+}
+
+.language-settings a {
+  top: -6px;
+  right: 0;
+  position: absolute;
+}
+
+.edit-links {
+  text-align: right;
+}
+
+.edit-links a::before {
+  content: url("https://img.icons8.com/color/12/000000/edit.png");
+  padding-right: 2px;
+}
+
+/* Top Navigation Bar */
+
+header {
+  position: relative;
+  float: right;
+	width: calc(100% - 180px);
+	height: 95px;
+  border-bottom: 1px solid #000;
+}
+
+.status {
+  width: 100%;
+  height: 50%;
+  font-size: .8rem;
+  text-align: right;
+  padding: .4rem .8rem;
+}
+
+.status ul li {
+  display: inline-block;
+  padding: 0 .4rem;
+}
+
+.user-status::before {
+  vertical-align: middle;
+  content: url("https://img.icons8.com/dusk/32/000000/cat-profile.png");
+  padding-right: 2px;
+}
+
+.navigation {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 50%;
+  padding-right: .8rem;
+  font-size: 1rem;
+}
+
+.navigation .left {
+  float: left;
+  width: auto;
+}
+
+.navigation .right {
+  float: right;
+  width: auto;
+}
+
+.navigation ul li {
+  display: inline-block;
+  padding: 1.2rem .6rem .6rem .6rem;
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  border-color: #000;
+  border-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.navigation ul li.last {
+  border-width: 0 1px 0 1px;
+}
+
+.navigation ul li.active {
+  background-color: rgb(14, 13, 18);
+}
+
+.navigation ul li.active a {
+  color: #E3E3E3;
+  text-decoration: none;
+}
+
+.navigation .search {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  padding-right: .8rem;
+}
+
+.navigation .search img {
+  position: absolute;
+  top: calc(.9rem + 1px); /* Vertical align */
+  right: .3rem;
+  width: 24px;
+  height: 24px;
+}
+
+.navigation input[type=search] {
+  width: 100%;
+  height: 26px;
+  margin-top: .9rem;
+  margin-left: .6rem;
+  padding: .3rem 24px .3rem .3rem;
+  border: 1px solid #000;
+}
+
+/* Main Content */
+
+main {
+  float: left;
+  background-color: #0E0D12;
+	width: calc(100% - 180px);
+	min-height: calc(100vh - 90px);
+  padding: 1.8rem;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+article > h2 {
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: .6rem;
+  border-bottom: 1px solid #333;
+}
+
+article > h3 {
+  overflow: hidden;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: .9rem 0 .6rem 0;
+  border-bottom: 1px solid #333;
+}
+
+article > h4 {
+  overflow: hidden;
+  font-size: 1.3rem;
+}
+
+article p {
+  line-height: 1.5;
+  margin: .6rem 0;
+}
+
+.article-info {
+  float: right;
+  text-align: center;
+  background-color: rgb(42, 40, 54);
+  font-size: .9rem;
+  margin-left: .6rem;
+  border: 1px solid #000;
+}
+
+.article-info h4 {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.article-info table td {
+  text-align: left;
+  padding: .3rem 1rem .3rem 0;
+}
+
+.article-content > *, .article-info > * {
+  margin: .6rem;
+}
+
+.article-content {
+  float: left;
+  background-color: rgb(42, 40, 54);
+  border: 1px solid #000;
+}
+
+.article-content h4 {
+  text-align: center;
+}
+
+.article-content-list {
+  list-style: none;
+  counter-reset: li;
+}
+
+.article-content-list li {
+  line-height: 1.5;
+}
+
+.article-content-list li::before {
+  counter-increment: li;
+  content: counters(li, ".");
+  padding-right: .6rem;
+}
+
+.article-content-list li ul {
+  text-indent: .6rem;
+}
+
+.reference-list {
+  line-height: 1.5;
+  text-indent: 2rem;
+}
+
+.reference-list li > a::after, .external-links li > a::after {
+  content: url("https://img.icons8.com/ultraviolet/14/000000/external-link.png");
+  margin-left: .3rem;
+}
+
+.article-categories {
+  background-color: rgb(42, 40, 54);
+  width: 100%;
+  margin-top: .9rem;
+  padding: .6rem;
+  border: 1px solid #000;
+}
+
+.article-categories ul {
+  display: inline;
+  list-style: none;
+}
+
+.article-categories ul li {
+  display: inline;
+  margin-left: .6rem;
+}
+
+.article-categories ul li::after {
+  content: "|";
+  color: #0E0D12;
+  margin-left: .6rem;
+}
+
+.article-categories ul li.last::after {
+  content: "";
+}
+
+article > figure {
+  float: left;
+  background-color: rgb(42, 40, 54);
+  width: 180px;
+  margin-right: .6rem;
+  margin-bottom: .6rem;
+  padding: .3rem;
+  border: 1px solid #000;
+}
+
+article > figure img {
+  width: 100%;
+}
+
+article > figure figcaption {
+  font-size: .9rem;
+  padding: .3rem 0;
+  line-height: 1.2;
+}
+
+/* Footer */
+
+footer {
+  float: right;
+  position: relative;
+  width: calc(100% - 180px);
+  padding: 2rem;
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+footer p {
+  padding-bottom: 1.5rem;
+}
+
+footer ul li{
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+footer img {
+  float: right;
+  padding-left: .6rem;
+}
